@@ -2,6 +2,16 @@
 	position: fixed
 	background-color: $mainColor
 	width: 100%
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		height: 1px
+		background-color: $GreyBG3
+		left: 0
+		right: 0
+		top: 109px
+		//display: none
 	.contacts
 		display: flex
 		align-items: center
@@ -20,7 +30,7 @@
 			font-size: 14px
 			padding-left: 20px
 			position: relative
-			&::before
+			//&::before
 				content: ''
 				position: absolute
 				height: 16px
@@ -30,6 +40,13 @@
 				left: 0
 				top: 50%
 				transform: translate(0, -50%)
+			.fico
+				position: absolute
+				font-size: 16px
+				color: $GreenBG
+				left: 0
+				top: 50%
+				transform: translate(0, -50%) translate(0, -3px)	
 		.email
 			font-family: $MyriadProRegular
 			font-size: 14px
@@ -37,7 +54,7 @@
 			position: relative
 			margin-left: auto
 			margin-right: 0
-			&::before
+			//&::before
 				content: ''
 				position: absolute
 				height: 16px
@@ -47,6 +64,13 @@
 				left: 0
 				top: 50%
 				transform: translate(0, -50%)			
+			.fico
+				position: absolute
+				font-size: 10px
+				color: $GreenBG
+				left: 0
+				top: 50%
+				transform: translate(0, -50%) translate(0, -1px)	
 		.tel
 			margin-left: 75px
 			.number
@@ -130,7 +154,7 @@
 				.btn
 					position: relative
 					padding-left: 71px
-					&::after
+					//&::after
 						content: ''
 						position: absolute
 						height: 22px
@@ -139,11 +163,22 @@
 						top: 50%
 						transform: translate(0, -50%)
 						+sprite($user)	
+					.fico
+						position: absolute
+						font-size: 22px
+						color: $GreenF
+						left: 30px
+						top: 50%
+						transform: translate(0, -50%) translate(0, -1px)
+						transition: color .5s
+					&:hover
+						.fico
+							color: white							
 			&--cart
 				.btn
 					position: relative
 					padding-left: 70px
-					&::after
+					//&::after
 						content: ''
 						position: absolute
 						height: 22px
@@ -151,5 +186,16 @@
 						left: 30px
 						top: 50%
 						transform: translate(0, -50%)
-						+sprite($cart)	
+						+sprite($cart)
+					.fico
+						position: absolute
+						font-size: 21px
+						color: $GreenF
+						left: 30px
+						top: 50%
+						transform: translate(0, -50%) translate(0, -1px)
+						transition: color .5s
+					&:hover
+						.fico
+							color: white		
 			
