@@ -17,13 +17,36 @@
 				text-align: left
 				.title
 					display: block
-					max-width: 520px
+					max-width: 725px
 					font-family: $LemonTuesday
 					font-size: 110px
 					color: $GreenF2
 					margin-bottom: 50px
 					padding-right: 215px
 					//text-align: left
+					position: relative
+				.sale-value
+					z-index: 1
+					position: absolute
+					font-family: $OpenSansBold
+					font-size: 27px
+					color: white
+					line-height: 35px
+					text-align: center
+					max-width: 100px
+					top: 35px
+					right: 20px
+					&::after
+						z-index: -1
+						content: ''
+						position: absolute
+						height: 141px
+						width: 141px
+						background-color: $RedBG
+						border-radius: 50%
+						left: 50%
+						top: 50%
+						transform: translate(-50%, -50%)
 				.hours
 					display: block
 					font-family: $OpenSansItalic
