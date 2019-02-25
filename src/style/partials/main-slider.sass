@@ -1,0 +1,153 @@
+.main-slider
+	padding-top: 159px
+	//background: url('../img/slider-bg.png') no-repeat
+	//background-position: left 50% top 0
+	.sale-carousel
+		.sale-slide
+			//display: inline-block
+			background-color: red
+			text-align: center
+			padding-bottom: 150px
+			.sale
+				display: block
+				width: 1140px
+				margin: 0 auto
+				//height: 400px
+				padding-top: 115px
+				text-align: left
+				.title
+					display: block
+					max-width: 520px
+					font-family: $LemonTuesday
+					font-size: 110px
+					color: $GreenF2
+					margin-bottom: 50px
+					padding-right: 215px
+					//text-align: left
+				.hours
+					display: block
+					font-family: $OpenSansItalic
+					font-size: 26px
+					color: white
+					//text-align: left
+					margin-bottom: 58px
+				.btn
+					display: inline-block
+					font-family: $OpenSansRegular
+					font-size: 16px
+					color: #fefffe
+					line-height: 55px
+					padding: 0 80px
+					background-color: $OrangeBG
+					border-radius: 5px
+					text-transform: uppercase
+					text-decoration: none
+			&--1
+				background: url('../img/slider-bg.png') no-repeat
+				background-position: left 50% top 0	
+			&--2
+				background: url('../img/slider-bg.png') no-repeat
+				background-position: left 50% top 0	
+			&--3
+				background: url('../img/slider-bg.png') no-repeat
+				background-position: left 50% top 0					
+		.custom-dots
+			position: absolute
+			bottom: 65px
+			list-style: none
+			display: block
+			text-align: center
+			padding: 0
+			margin: 0
+			width: 100%
+			li 
+				position: relative
+				display: inline-block
+				height: 15px
+				width: 15px
+				margin: 0 10px
+				padding: 0
+				//background-color: $pseudoGrayBg2
+				button
+					//cursor: pointer
+					border-radius: 50%
+					border: 2px solid $GreyBG
+					background: transparent
+					display: block
+					height: 15px
+					width: 15px
+					outline: none
+					line-height: 0px
+					font-size: 0px
+					color: transparent
+					padding: 0
+					cursor: pointer
+					//background-color: red
+					//&:hover
+						outline: none
+					//&:focus
+						outline: none
+			.slick-active
+				button
+					background-color: $GreenBG
+					border: 2px solid $GreenBG
+					//box-shadow: 0px 5px 18px rgba(245,17,44,.55)
+	.arrow
+		z-index: 5
+		display: inline-block
+		position: absolute
+		width: 53px
+		height: 53px
+		//border: 1px solid red
+		border-radius: 50%
+		background-color: black
+		&:hover
+			cursor: pointer
+		&--left
+			left: 156px
+			top: 50%
+			transform: translateY(-50%)
+			&::after
+				//display: inline-block
+				content: ""
+				position: absolute
+				height: 3px
+				width: 12px
+				background-color: #fff
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%) translate(-2px, -4px) rotate(-45deg)
+			&::before
+				//display: inline-block
+				content: ""
+				position: absolute
+				height: 3px
+				width: 12px
+				background-color: #fff
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%) translate(-2px, 4px) rotate(45deg)		
+		&--right
+			right: 156px
+			top: 50%
+			transform: translateY(-50%)
+			&::after
+				//display: inline-block
+				content: ""
+				position: absolute
+				height: 3px
+				width: 12px
+				background-color: #fff
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%) translate(2px, -4px) rotate(45deg)		
+			&::before
+				//display: inline-block
+				content: ""
+				position: absolute
+				height: 3px
+				width: 12px
+				background-color: #fff
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%) translate(2px, 4px) rotate(-45deg)
