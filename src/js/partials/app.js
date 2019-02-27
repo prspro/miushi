@@ -77,9 +77,10 @@ $(document).ready(function(){
         slidesToShow: 4,
         slidesToScroll: 1,  
         //adaptiveHeight: true    
-        slickFilter: $('.slide--new')
+        //slickFilter: $('.slide--new')
     });
-    
+    $('.new-stock-carousel').slick('slickFilter', $('.slide--new'));
+
     $('.btn--news').on('click', function(){
         $('.new-stock-carousel').slick('slickUnfilter');   
         $('.new-stock-carousel').slick('slickFilter', $('.slide--new'));
