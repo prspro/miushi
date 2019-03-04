@@ -1,0 +1,52 @@
+.reasons
+	text-align: center
+	padding-top: 80px
+	.title
+		display: inline-block
+		font-family: $LemonTuesday
+		font-size: 60px
+		color: $GreyF
+		position: relative
+		padding: 0 145px
+		//margin-bottom: 45px
+		margin-bottom: 80px
+			content: ''
+			position: absolute
+			+sprite($left-ptrn2)
+			//background-size: cover
+			height: 40px
+			width: 109px
+			left: 0
+			top: 50%
+			transform: translate(0, -50%)
+		&::after
+			content: ''
+			position: absolute
+			+sprite($right-ptrn2)
+			//background-size: cover
+			//background-position: 0 40px
+			//background-color: #555
+			height: 40px
+			width: 109px
+			right: 0
+			top: 50%
+			transform: translate(0, -50%)
+	.flex-con
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		.reason
+			width: 195px
+			margin-bottom: 35px
+			&__pic
+				//display: inline-block
+				width: 61px
+				//height: 200px
+				//background-color: red
+				//border: 1px solid #000
+				margin-bottom: 30px
+			&__txt
+				font-family: $OpenSans
+				font-size: 16px
+				color: $GreyF3
+				line-height: 1.8
