@@ -1,0 +1,126 @@
+.reviews
+	text-align: center
+	padding-bottom: 110px
+	.title
+		display: inline-block
+		font-family: $LemonTuesday
+		font-size: 60px
+		color: $GreyF
+		position: relative
+		padding: 0 145px
+		//margin-bottom: 45px
+		margin-bottom: 55px
+		&::before
+			content: ''
+			position: absolute
+			+sprite($left-ptrn2)
+			//background-size: cover
+			height: 40px
+			width: 109px
+			left: 0
+			top: 50%
+			transform: translate(0, -50%)
+		&::after
+			content: ''
+			position: absolute
+			+sprite($right-ptrn2)
+			//background-size: cover
+			//background-position: 0 40px
+			//background-color: #555
+			height: 40px
+			width: 109px
+			right: 0
+			top: 50%
+			transform: translate(0, -50%)
+	.review-box
+		display: flex
+		justify-content: space-between
+		.review
+			padding: 42px 50px 47px 50px
+			//width: 360px
+			border: 1px solid #eaebed
+			text-align: left
+			.person
+				margin-bottom: 35px
+				.pic-part
+					display: inline-block
+					height: 66px
+					width: 66px
+					border-radius: 50%
+					//background-color: red
+					margin-right: 19px
+				.name-part
+					display: inline-block
+					vertical-align: top
+					padding-top: 15px
+					//text-align: left
+					.name
+						font-family: $OpenSansBold
+						font-size: 14px
+						color: $pseudoBlueF
+						margin-bottom: 8px
+						letter-spacing: 0.97
+					.data
+						font-family: $OpenSansSemiBold
+						font-size: 13px
+						color: $GreyF2
+			.comment
+				max-width: 210px
+				//padding-left: 50px
+				margin-bottom: 25px
+				//text-align: left
+				font-family: $OpenSansRegular
+				font-size: 14px
+				line-height: 1.5
+			.com-pic
+				display: block
+				margin-bottom: 35px
+				width: 106px
+				//height: 200px
+				//background-color: red
+			.soc-bar
+				border-top: 1px solid #eaebed
+				display: flex
+				align-items: center
+				padding: 16px 0
+				.fico
+					color: #bacada
+					font-size: 15px
+					line-height: 15px
+					&:hover
+						color: #5e81a7
+				.like
+					//vertical-align: middle
+					//display: block
+					margin-right: 21px
+					height: 15px
+				.chat
+					//vertical-align: middle
+					//display: inline-block
+					height: 15px
+					margin-right: 8px
+				.counter
+					display: inline-block
+					font-family: $OpenSansBold
+					font-size: 15px
+					line-height: 0.8
+					color: $pseudoBlueF
+					align-self: flex-start
+					margin-right: 20px
+				.speaker
+					height: 15px
+			.subcribe
+				display: block
+				width: 100%
+				color: white
+				font-family: $OpenSansBold
+				font-size: 14px
+				line-height: 30px
+				border: none
+				border-radius: 3px
+				background-color: $pseudoBlueF
+				cursor: pointer
+				.fico
+					font-size: 15px
+					margin-right: 8px
+					vertical-align: middle
