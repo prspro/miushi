@@ -1,0 +1,73 @@
+.foot
+	background-color: $pseudoBlueBG
+	padding: 75px 0 53px 0
+	.flex-box
+		display: flex
+		//justify-content: space-between
+		margin-bottom: 55px
+		.col
+			margin-right: 100px
+			.title
+				color: white
+				//text-decoration: none
+				font-size: 14px
+				font-family: $OpenSans			
+				margin-bottom: 20px	
+			.list
+				.item
+					margin-bottom: 10px
+					&:last-of-type
+						margin-bottom: 0
+					.link
+						font-family: $OpenSans	
+						font-size: 12px
+						color: $GreyF4
+						text-decoration: none
+			&--sets
+				width: 290px
+				.title
+					display: block
+				.list
+					display: flex
+					flex-direction: column
+					flex-wrap: wrap
+					height: 150px
+					align-content: space-between
+					.item
+						max-width: 200px
+			&--white
+				margin-right: auto
+				margin-left: 0
+				.list
+					.item
+						.link
+							color: white
+							text-decoration: none
+							font-size: 14px
+							font-family: $OpenSans			
+							margin-bottom: 20px	
+			&:last-of-type
+				margin-right: 0
+	.info
+		display: flex
+		align-items: center
+		.txt
+			font-family: $OpenSans
+			font-size: 12px
+			color: $GreyF4
+			margin-right: 135px
+		.link
+			font-family: $OpenSans
+			font-size: 12px
+			color: $GreyF4		
+			margin-right: auto
+			margin-left: 0		
+		.fico
+			color: #8d969a
+			font-size: 27px
+			margin-right: 15px
+			cursor: pointer
+			&:last-of-type
+				margin-right: 0
+			&:hover
+				color: grey
