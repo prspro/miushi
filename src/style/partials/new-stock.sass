@@ -24,6 +24,8 @@
 		padding-bottom: 10px
 		//пmargin-bottom: 60px
 		.slide
+			position: relative
+			//overflow: hidden
 			display: inline-block
 			//height: 100px
 			//width: 100px
@@ -34,7 +36,46 @@
 			overflow: none
 			background-color: #fff
 			&--new
+				overflow: hidden
+				.label
+					position: absolute
+					background-color: green
+					font-family: $RobotoSlabBold
+					font-size: 16px
+					color: white
+					padding: 6px 50px
+					top: 0
+					left: 0
+					transform: translate(-50%, -50%) rotate(-45deg) translateY(40px)
 			&--stock
+				overflow: hidden
+				.label
+					position: absolute
+					background-color: red
+					font-family: $RobotoSlabBold
+					font-size: 16px
+					color: white
+					padding: 6px 50px
+					top: 0
+					left: 0
+					transform: translate(-50%, -50%) rotate(-45deg) translateY(45px)
+			&--hot
+				//position: relative
+				.circle
+					position: absolute
+					height: 49px
+					width: 49px
+					background-color: red
+					border-radius: 50%
+					top: 22px
+					right: 17px
+					.fico
+						position: absolute
+						top: 50%
+						left: 50%
+						transform: translate(-50%, -50%)
+						color: white
+						font-size: 30px
 			.new-stock-pic
 				width: 263px
 				height: 228px
