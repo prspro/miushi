@@ -11,6 +11,9 @@
 		padding: 0 145px
 		//margin-bottom: 45px
 		margin-bottom: 80px
+		+r(991)
+			font-size: 48px
+			padding: 0 116px		
 		&::before
 			content: ''
 			position: absolute
@@ -21,6 +24,8 @@
 			left: 0
 			top: 50%
 			transform: translate(0, -50%)
+			+r(991)
+				transform: scale(0.75) translate(0, -67%)
 		&::after
 			content: ''
 			position: absolute
@@ -33,10 +38,13 @@
 			right: 0
 			top: 50%
 			transform: translate(0, -50%)
+			+r(991)
+				transform: scale(0.75) translate(0, -67%)
 	.flex-con
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
+		+r(1199)
 		.reason
 			width: 195px
 			margin-bottom: 35px
@@ -52,3 +60,6 @@
 				font-size: 16px
 				color: $GreyF3
 				line-height: 1.8
+			&:last-of-type
+				+r(991)
+					margin: 0 auto

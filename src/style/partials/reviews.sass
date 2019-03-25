@@ -10,6 +10,9 @@
 		padding: 0 145px
 		//margin-bottom: 45px
 		margin-bottom: 55px
+		+r(991)
+			font-size: 48px
+			padding: 0 116px
 		&::before
 			content: ''
 			position: absolute
@@ -20,6 +23,8 @@
 			left: 0
 			top: 50%
 			transform: translate(0, -50%)
+			+r(991)
+				transform: scale(0.75) translate(0, -67%)
 		&::after
 			content: ''
 			position: absolute
@@ -32,14 +37,23 @@
 			right: 0
 			top: 50%
 			transform: translate(0, -50%)
+			+r(991)
+				transform: scale(0.75) translate(0, -67%)
 	.review-box
 		display: flex
 		justify-content: space-between
+		+r(1199)
+			justify-content: space-between
 		.review
 			padding: 42px 50px 47px 50px
 			//width: 360px
 			border: 1px solid #eaebed
 			text-align: left
+			+r(1199)
+				padding: 42px 40px 47px 40px
+			&:last-of-type
+				+r(1199)
+					display: none
 			.person
 				margin-bottom: 35px
 				.pic-part

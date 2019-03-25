@@ -2,6 +2,8 @@
 	text-align: center
 	padding: 80px 0 0 0 
 	//margin-bottom: 60px
+	+r(991)
+		padding-top: 60px
 	.title
 		display: inline-block
 		font-family: $LemonTuesday
@@ -10,6 +12,9 @@
 		position: relative
 		padding: 0 145px
 		//margin-bottom: 45px
+		+r(991)
+			font-size: 48px
+			padding: 0 116px
 		&::before
 			content: ''
 			position: absolute
@@ -20,6 +25,8 @@
 			left: 0
 			top: 50%
 			transform: translate(0, -50%)
+			+r(991)
+				transform: scale(0.75) translate(0, -67%)
 		&::after
 			content: ''
 			position: absolute
@@ -32,6 +39,8 @@
 			right: 0
 			top: 50%
 			transform: translate(0, -50%)
+			+r(991)
+				transform: scale(0.75) translate(0, -67%)
 	.sets-carousel
 		padding-bottom: 10px
 		//пmargin-bottom: 60px
@@ -49,10 +58,15 @@
 				height: 228px
 				border-radius: 10px 10px 0 0
 				margin-bottom: 27px
+				+r(1199)
+					width: 100%
+					height: auto
 			.set-name	
 				font-family: $OpenSansBold
 				font-size: 20px
 				margin-bottom: 24px
+				+r(1199)
+					font-size: 20px
 			.set-info
 				font-family: $OpenSansLight
 				font-size: 12px
@@ -62,6 +76,8 @@
 				align-items: center
 				padding: 0 35px
 				margin-bottom: 30px
+				+r(1199)
+					padding: 0 18px
 				.set-price
 					//display: inline-block
 					font-family: serif
@@ -70,6 +86,9 @@
 					//vertical-align: top	
 					margin-right: 5px
 					line-height: 28px
+					+r(1199)
+						font-size: 22px
+						line-height: 22px
 				.set-val
 					//display: inline-block
 					font-family: serif
@@ -140,6 +159,8 @@
 				background-color: $OrangeBG
 				margin-bottom: 38px
 				position: relative
+				+r(1199)
+					padding-right: 70px
 				&:hover
 					cursor: pointer
 				.fico

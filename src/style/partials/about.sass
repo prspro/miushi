@@ -9,6 +9,9 @@
 		position: relative
 		padding: 0 145px
 		margin-bottom: 75px
+		+r(991)
+			font-size: 48px
+			padding: 0 116px
 		&::before
 			content: ''
 			position: absolute
@@ -19,6 +22,8 @@
 			left: 0
 			top: 50%
 			transform: translate(0, -50%)
+			+r(991)
+				transform: scale(0.75) translate(0, -67%)
 		&::after
 			content: ''
 			position: absolute
@@ -31,6 +36,8 @@
 			right: 0
 			top: 50%
 			transform: translate(0, -50%)
+			+r(991)
+				transform: scale(0.75) translate(0, -67%)
 	.title2
 		text-align: left
 		display: block
@@ -38,6 +45,8 @@
 		font-size: 24px
 		color: $GreyF
 		margin-bottom: 35px
+		+r(1199)
+			font-size: 22px
 	.txt
 		text-align: left
 		font-family: $OpenSans
@@ -51,3 +60,6 @@
 		width: 277px
 		float: right
 		margin-left: 58px
+		+r(1199)
+			margin-bottom: 40px
+			width: 220px
