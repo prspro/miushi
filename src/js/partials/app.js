@@ -185,8 +185,8 @@ $(document).ready(function(){
         if (accordeon) {
             $('.col .list').not($(this).next()).slideUp(500);
             $(this).next().slideToggle(500);
+            $('.col .title').not($(this)).removeClass("unwrapped");
             $(this).toggleClass("unwrapped");
-            $('.col .list').removeClass("unwrapped");
         }
     });
     
