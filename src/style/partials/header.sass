@@ -94,10 +94,15 @@
 				transform: translate(-50%, -50%)
 			.logo-pic
 				margin-right: 10px
+				+r(767)
+					margin: 0
+					height: 46px
 				&:last-of-type
 					margin-right: 0
-				+r(1199)
-					//height: 55px
+					+r(767)
+						display: none
+
+				
 		.address	
 			font-family: $MyriadProRegular
 			font-size: 14px

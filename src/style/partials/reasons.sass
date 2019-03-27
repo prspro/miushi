@@ -2,6 +2,8 @@
 	text-align: center
 	padding-top: 80px
 	padding-bottom: 70px
+	+r(767)
+		padding: 70px 0
 	.title
 		display: inline-block
 		font-family: $LemonTuesday
@@ -13,7 +15,11 @@
 		margin-bottom: 80px
 		+r(991)
 			font-size: 48px
-			padding: 0 116px		
+			padding: 0 116px	
+		+r(767)
+			font-size: 44px	
+			padding: 0
+			margin-bottom: 65px
 		&::before
 			content: ''
 			position: absolute
@@ -26,6 +32,8 @@
 			transform: translate(0, -50%)
 			+r(991)
 				transform: scale(0.75) translate(0, -67%)
+			+r(767)
+				display: none
 		&::after
 			content: ''
 			position: absolute
@@ -40,11 +48,17 @@
 			transform: translate(0, -50%)
 			+r(991)
 				transform: scale(0.75) translate(0, -67%)
+			+r(767)
+				display: none
 	.flex-con
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
-		+r(1199)
+		+r(767)
+			flex-wrap: nowrap
+			flex-direction: column
+			align-items: center	
+			justify-content: none
 		.reason
 			width: 195px
 			margin-bottom: 35px
@@ -55,11 +69,31 @@
 				//background-color: red
 				//border: 1px solid #000
 				margin-bottom: 30px
+				+r(767)
+					margin-bottom: 25px
 			&__txt
 				font-family: $OpenSans
 				font-size: 16px
 				color: $GreyF3
 				line-height: 1.8
+				margin-bottom: 85px
 			&:last-of-type
 				+r(991)
 					margin: 0 auto
+				+r(767)
+					margin: 0
+	.show-more
+		display: none
+		text-transform: uppercase
+		max-width: 290px
+		font-size: 14px
+		font-family: $OpenSansSemiBold
+		line-height: 40px
+		border: 1px solid $OrangeBG
+		text-decoration: none
+		border-radius: 5px
+		margin: 0 auto
+		color: $OrangeBG
+		//cursor: pointer
+		+r(767)
+			display: block 

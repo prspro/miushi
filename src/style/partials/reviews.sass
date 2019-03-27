@@ -13,6 +13,9 @@
 		+r(991)
 			font-size: 48px
 			padding: 0 116px
+		+r(767)
+			font-size: 44px
+			padding: 0 70px
 		&::before
 			content: ''
 			position: absolute
@@ -44,6 +47,8 @@
 		justify-content: space-between
 		+r(1199)
 			justify-content: space-between
+		+r(767)
+			flex-direction: column
 		.review
 			padding: 42px 50px 47px 50px
 			//width: 360px
@@ -51,9 +56,14 @@
 			text-align: left
 			+r(1199)
 				padding: 42px 40px 47px 40px
+			+r(767)
+				margin-bottom: 40px
 			&:last-of-type
 				+r(1199)
 					display: none
+			&:nth-of-type(2)
+				+r(767)
+					margin-bottom: 0
 			.person
 				margin-bottom: 35px
 				.pic-part

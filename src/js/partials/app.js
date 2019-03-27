@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
     $('.sale-carousel').slick({
         infinite: true,
@@ -42,6 +41,18 @@ $(document).ready(function(){
                     slidesToShow: 3,
                     slidesToScroll: 1,
                 }
+            },
+            {
+                breakpoint: 767,
+                settings: 
+                {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    centerMode: true,
+                    variableWidth: true,
+                }
             }
         ] 
     });
@@ -64,6 +75,18 @@ $(document).ready(function(){
                 {
                     slidesToShow: 3,
                     slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: 
+                {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    centerMode: true,
+                    variableWidth: true,
                 }
             }
         ]  
@@ -88,6 +111,18 @@ $(document).ready(function(){
                     slidesToShow: 3,
                     slidesToScroll: 1,
                 }
+            },
+            {
+                breakpoint: 767,
+                settings: 
+                {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    centerMode: true,
+                    variableWidth: true,
+                }
             }
         ]  
     });
@@ -110,6 +145,18 @@ $(document).ready(function(){
                 {
                     slidesToShow: 3,
                     slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: 
+                {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    centerMode: true,
+                    variableWidth: true,
                 }
             }
         ]    
@@ -134,6 +181,18 @@ $(document).ready(function(){
                 {
                     slidesToShow: 3,
                     slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: 
+                {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false,
+                    centerMode: true,
+                    variableWidth: true,
                 }
             }
         ]  
@@ -200,12 +259,12 @@ $(document).ready(function(){
 
     function Allow (allow) {
         arr.unshift(allow);
+        //xor
         if (  (arr[0] && !arr[1]) || (!arr[0] && arr[1]) ) {
             return true
         } else {
             return false
         }
     }
-
 
 });

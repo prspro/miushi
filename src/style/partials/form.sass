@@ -3,6 +3,8 @@
 	background-position: center top
 	background-size: cover
 	padding: 75px 0 80px 0
+	+r(767)
+		padding: 55px 0 53px 0
 	.form-box
 		max-width: 765px
 		margin-left: auto
@@ -14,6 +16,9 @@
 			font-family: $OpenSans
 			font-size: 15px
 			margin-bottom: 10px
+			+r(767)
+				font-size: 14px
+				margin-bottom: 20px
 		.title
 			display: inline-block
 			font-family: $LemonTuesday
@@ -23,12 +28,17 @@
 			//padding: 0 145px
 			//margin-bottom: 45px
 			margin-bottom: 55px
+			+r(767)
+				font-size: 44px
+				margin-bottom: 35px
 		.contact-form
 			margin-bottom: 30px
 			display: flex
 			align-items: center
 			+r(991)
 				justify-content: space-between
+			+r(767)
+				flex-direction: column
 			.name
 				font-family: $OpenSans
 				color: white
@@ -50,6 +60,9 @@
 				+r(991)
 					width: 220px
 					margin-right: 0
+				+r(767)
+					width: 290px
+					margin-bottom: 20px
 			.phone
 				font-family: $OpenSans
 				color: white
@@ -71,6 +84,9 @@
 				+r(991)
 					width: 220px
 					margin-right: 0
+				+r(767)
+					width: 290px
+					margin-bottom: 40px
 			.submt
 				//display: inline-block
 				font-family: $OpenSansSemiBold
@@ -82,6 +98,10 @@
 				background-color: $OrangeBG
 				border-radius: 5px
 				cursor: pointer
+				+r(767)
+					padding: 0
+					width: 290px
+					margin-bottom: 25px
 		.warn-txt
 			font-family: $OpenSans
 			font-size: 12px

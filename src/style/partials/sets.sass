@@ -4,292 +4,306 @@
 	//margin-bottom: 60px
 	+r(991)
 		padding-top: 60px
-	.title
-		display: inline-block
-		font-family: $LemonTuesday
-		font-size: 60px
-		color: $GreyF
-		position: relative
-		padding: 0 145px
-		//margin-bottom: 45px
-		+r(991)
-			font-size: 48px
-			padding: 0 116px
-		&::before
-			content: ''
-			position: absolute
-			+sprite($left-ptrn2)
-			//background-size: cover
-			height: 40px
-			width: 109px
-			left: 0
-			top: 50%
-			transform: translate(0, -50%)
-			+r(991)
-				transform: scale(0.75) translate(0, -67%)
-		&::after
-			content: ''
-			position: absolute
-			+sprite($right-ptrn2)
-			//background-size: cover
-			//background-position: 0 40px
-			//background-color: #555
-			height: 40px
-			width: 109px
-			right: 0
-			top: 50%
-			transform: translate(0, -50%)
-			+r(991)
-				transform: scale(0.75) translate(0, -67%)
-	.sets-carousel
-		padding-bottom: 10px
-		//пmargin-bottom: 60px
-		.set
+	+r(767)
+		padding: 45px 0 0 0
+	.container
+		+r(767)
+			width: 100%
+		.title
 			display: inline-block
-			//height: 100px
-			//width: 100px
-			//background-color: #f4f4f4
-			margin: 45px 15px
-			border-radius: 10px
-			box-shadow: 0px 3px 34px -9px rgba(0,0,0,0.75)
-			overflow: none
-			.set-pic
-				width: 263px
-				height: 228px
-				border-radius: 10px 10px 0 0
-				margin-bottom: 27px
-				+r(1199)
-					width: 100%
-					height: auto
-			.set-name	
-				font-family: $OpenSansBold
-				font-size: 20px
-				margin-bottom: 24px
-				+r(1199)
-					font-size: 20px
-			.set-info
-				font-family: $OpenSansLight
-				font-size: 12px
-				margin-bottom: 27px
-			.flex-cnt
-				display: flex
-				align-items: center
-				padding: 0 35px
-				margin-bottom: 30px
-				+r(1199)
-					padding: 0 18px
-				.set-price
-					//display: inline-block
-					font-family: serif
-					font-family: $RobotoSlabBold
-					font-size: 28px		
-					//vertical-align: top	
-					margin-right: 5px
-					line-height: 28px
+			font-family: $LemonTuesday
+			font-size: 60px
+			color: $GreyF
+			position: relative
+			padding: 0 145px
+			//margin-bottom: 45px
+			+r(991)
+				font-size: 48px
+				padding: 0 116px
+			+r(767)
+				font-size: 44px
+				padding: 0 85px
+			&::before
+				content: ''
+				position: absolute
+				+sprite($left-ptrn2)
+				//background-size: cover
+				height: 40px
+				width: 109px
+				left: 0
+				top: 50%
+				transform: translate(0, -50%)
+				+r(991)
+					transform: scale(0.75) translate(0, -67%)
+				+r(767)
+					transform: scale(0.75) translate(-20px, -67%)
+			&::after
+				content: ''
+				position: absolute
+				+sprite($right-ptrn2)
+				//background-size: cover
+				//background-position: 0 40px
+				//background-color: #555
+				height: 40px
+				width: 109px
+				right: 0
+				top: 50%
+				transform: translate(0, -50%)
+				+r(991)
+					transform: scale(0.75) translate(0, -67%)
+				+r(767)
+					transform: scale(0.75) translate(20px, -67%)
+		.sets-carousel
+			padding-bottom: 10px
+			//пmargin-bottom: 60px
+			.set
+				display: inline-block
+				//height: 100px
+				//width: 100px
+				//background-color: #f4f4f4
+				margin: 45px 15px
+				border-radius: 10px
+				box-shadow: 0px 3px 34px -9px rgba(0,0,0,0.75)
+				overflow: none
+				+r(767)
+					max-width: 227px
+				.set-pic
+					width: 263px
+					height: 228px
+					border-radius: 10px 10px 0 0
+					margin-bottom: 27px
 					+r(1199)
-						font-size: 22px
-						line-height: 22px
-				.set-val
-					//display: inline-block
-					font-family: serif
-					font-family: $RobotoSlabBold
-					font-size: 14px		
-					vertical-align: top	
-					padding-top: 2px	
-					align-self: flex-start
-				.order-amount
-					//display: inline-block
-					font-family: $OpenSans
+						width: 100%
+						height: auto
+				.set-name	
+					font-family: $OpenSansBold
+					font-size: 20px
+					margin-bottom: 24px
+					+r(1199)
+						font-size: 20px
+				.set-info
+					font-family: $OpenSansLight
+					font-size: 12px
+					margin-bottom: 27px
+				.flex-cnt
+					display: flex
+					align-items: center
+					padding: 0 35px
+					margin-bottom: 30px
+					+r(1199)
+						padding: 0 18px
+					.set-price
+						//display: inline-block
+						font-family: serif
+						font-family: $RobotoSlabBold
+						font-size: 28px		
+						//vertical-align: top	
+						margin-right: 5px
+						line-height: 28px
+						+r(1199)
+							font-size: 22px
+							line-height: 22px
+					.set-val
+						//display: inline-block
+						font-family: serif
+						font-family: $RobotoSlabBold
+						font-size: 14px		
+						vertical-align: top	
+						padding-top: 2px	
+						align-self: flex-start
+					.order-amount
+						//display: inline-block
+						font-family: $OpenSans
+						font-size: 14px
+						//margin-left: auto
+						//padding: 0 26px
+						min-width: 37px
+						//height: 28px
+						//vertical-align: top
+					.btn
+						height: 13px
+						width: 13px
+						background: transparent
+						border: 1px solid $GreyBG2
+						padding: 0
+						border-radius: 50%
+						position: relative
+						&:hover
+							cursor: pointer
+						&--dec
+							margin-left: auto
+							&::after
+								content: ''
+								position: absolute
+								height: .5px
+								width: 4.5px
+								background-color: $GreyBG2
+								top: 50%
+								left: 50%
+								transform: translate(-50%, -50%) translate(.25px, 0)
+						&--inc
+							&::after
+								content: ''
+								position: absolute
+								height: .5px
+								width: 4.5px
+								background-color: $GreyBG2
+								top: 50%
+								left: 50%
+								transform: translate(-50%, -50%)
+							&::before
+								content: ''
+								position: absolute
+								width: .5px
+								height: 4.5px
+								background-color: $GreyBG2
+								top: 50%
+								left: 50%
+								transform: translate(-50%, -50%) translate(.25px, 0) 
+				.to-cart
+					display: inline-block
+					font-family: $OpenSansSemiBold
 					font-size: 14px
-					//margin-left: auto
-					//padding: 0 26px
-					min-width: 37px
-					//height: 28px
-					//vertical-align: top
-				.btn
-					height: 13px
-					width: 13px
-					background: transparent
-					border: 1px solid $GreyBG2
-					padding: 0
-					border-radius: 50%
+					color: white
+					line-height: 41px
+					padding: 0 90px 0 30px
+					text-transform: uppercase
+					border: none
+					border-radius: 5px
+					background-color: $OrangeBG
+					margin-bottom: 38px
 					position: relative
+					+r(1199)
+						padding-right: 70px
 					&:hover
 						cursor: pointer
-					&--dec
-						margin-left: auto
-						&::after
-							content: ''
-							position: absolute
-							height: .5px
-							width: 4.5px
-							background-color: $GreyBG2
-							top: 50%
-							left: 50%
-							transform: translate(-50%, -50%) translate(.25px, 0)
-					&--inc
-						&::after
-							content: ''
-							position: absolute
-							height: .5px
-							width: 4.5px
-							background-color: $GreyBG2
-							top: 50%
-							left: 50%
-							transform: translate(-50%, -50%)
-						&::before
-							content: ''
-							position: absolute
-							width: .5px
-							height: 4.5px
-							background-color: $GreyBG2
-							top: 50%
-							left: 50%
-							transform: translate(-50%, -50%) translate(.25px, 0) 
-			.to-cart
-				display: inline-block
-				font-family: $OpenSansSemiBold
-				font-size: 14px
-				color: white
-				line-height: 41px
-				padding: 0 90px 0 30px
-				text-transform: uppercase
-				border: none
-				border-radius: 5px
-				background-color: $OrangeBG
-				margin-bottom: 38px
-				position: relative
-				+r(1199)
-					padding-right: 70px
-				&:hover
-					cursor: pointer
-				.fico
-					font-size: 20px
-					position: absolute
-					top: 50%
-					right: 30px
-					//line-height: 41px
-					//line-height: 0
-					transform: translate(0, -50%)
-			&--hit
-				position: relative
-				.circle
-					position: absolute
-					background-color: red
-					height: 54px
-					width: 54px
-					top: 14px
-					right: 14px
-					border-radius: 50%
-					.txt
+					.fico
+						font-size: 20px
 						position: absolute
 						top: 50%
-						left: 50%
-						transform: translate(-50%, -50%) translateY(-2px)
-						font-family: $RobotoSlabBold
-						font-size: 16px
-						color: white 
-						//line-height: 0.8
-			&--veg
-				position: relative
-				.circle
-					position: absolute
-					background-color: green
-					height: 54px
-					width: 54px
-					top: 14px
-					right: 14px
-					border-radius: 50%
-					.txt
+						right: 30px
+						//line-height: 41px
+						//line-height: 0
+						transform: translate(0, -50%)
+				&--hit
+					position: relative
+					.circle
 						position: absolute
-						top: 50%
-						left: 50%
-						transform: translate(-50%, -50%) translateY(-2px)
-						font-family: $RobotoSlabBold
-						font-size: 16px
-						color: white 
-						//line-height: 0.8			
-		.custom-dots
-			position: absolute
-			bottom: 6px
-			list-style: none
-			display: block
-			text-align: center
-			padding: 0
-			margin: 0
-			width: 100%
-			li 
-				position: relative
-				display: inline-block
-				//height: 15px
-				//width: 15px
-				margin: 0 11px
+						background-color: red
+						height: 54px
+						width: 54px
+						top: 14px
+						right: 14px
+						border-radius: 50%
+						.txt
+							position: absolute
+							top: 50%
+							left: 50%
+							transform: translate(-50%, -50%) translateY(-2px)
+							font-family: $RobotoSlabBold
+							font-size: 16px
+							color: white 
+							//line-height: 0.8
+				&--veg
+					position: relative
+					.circle
+						position: absolute
+						background-color: green
+						height: 54px
+						width: 54px
+						top: 14px
+						right: 14px
+						border-radius: 50%
+						.txt
+							position: absolute
+							top: 50%
+							left: 50%
+							transform: translate(-50%, -50%) translateY(-2px)
+							font-family: $RobotoSlabBold
+							font-size: 16px
+							color: white 
+							//line-height: 0.8			
+			.custom-dots
+				position: absolute
+				bottom: 6px
+				list-style: none
+				display: block
+				text-align: center
 				padding: 0
-				//background-color: $pseudoGrayBg2
-				button
-					cursor: pointer
-					border-radius: 50%
-					//border: 2px solid $GreyBG
-					border: none
-					//background: transparent
-					display: block
-					height: 8px
-					width: 8px
-					outline: none
-					line-height: 0px
-					font-size: 0px
-					color: transparent
+				margin: 0
+				width: 100%
+				li 
+					position: relative
+					display: inline-block
+					//height: 15px
+					//width: 15px
+					margin: 0 11px
 					padding: 0
-					cursor: pointer
-					background-color: $GreyBG
-					//&:hover
+					//background-color: $pseudoGrayBg2
+					button
+						cursor: pointer
+						border-radius: 50%
+						//border: 2px solid $GreyBG
+						border: none
+						//background: transparent
+						display: block
+						height: 8px
+						width: 8px
 						outline: none
-					//&:focus
-						outline: none
-			.slick-active
-				button
-					background-color: $GreenBG
-					border: 2px solid $GreenBG
-					//box-shadow: 0px 5px 18px rgba(245,17,44,.55)
-	.arrow
-		z-index: 5
-		display: inline-block
-		position: absolute
-		width: 14px
-		height: 14px
-		//border: 1px solid red
-		//border-radius: 50%
-		//background-color: black
-		border: 2px solid $GreyBG2
-		border-right: none
-		border-top: none			
-		left: 50%
-		&:hover
-			cursor: pointer
-		&--left
-			bottom: 0
+						line-height: 0px
+						font-size: 0px
+						color: transparent
+						padding: 0
+						cursor: pointer
+						background-color: $GreyBG
+						//&:hover
+							outline: none
+						//&:focus
+							outline: none
+				.slick-active
+					button
+						background-color: $GreenBG
+						border: 2px solid $GreenBG
+						//box-shadow: 0px 5px 18px rgba(245,17,44,.55)
+		.arrow
+			z-index: 5
+			display: inline-block
+			position: absolute
+			width: 14px
+			height: 14px
+			//border: 1px solid red
+			//border-radius: 50%
+			//background-color: black
+			border: 2px solid $GreyBG2
+			border-right: none
+			border-top: none			
 			left: 50%
-			transform: translate(-50%, -3px) translate(-125px, 0) rotate(45deg)
-			&::after
-				content: ''
-				position: absolute
-				height: 2px
-				width: 25px
-				background-color: #000
-				left: 0
+			&:hover
+				cursor: pointer
+			&--left
 				bottom: 0
-				background-color: $GreyBG2
-				transform: rotate(-45deg) translate(1px, -8px)
-		&--right
-			bottom: 0
-			transform: translate(-50%, -3px) translate(125px, 0) rotate(-135deg)
-			&::after
-				content: ''
-				position: absolute
-				height: 2px
-				width: 25px
-				background-color: #000
-				left: 0
+				left: 50%
+				transform: translate(-50%, -3px) translate(-125px, 0) rotate(45deg)
+				&::after
+					content: ''
+					position: absolute
+					height: 2px
+					width: 25px
+					background-color: #000
+					left: 0
+					bottom: 0
+					background-color: $GreyBG2
+					transform: rotate(-45deg) translate(1px, -8px)
+			&--right
 				bottom: 0
-				background-color: $GreyBG2
-				transform: rotate(135deg) translate(-1px, 8px)
+				transform: translate(-50%, -3px) translate(125px, 0) rotate(-135deg)
+				&::after
+					content: ''
+					position: absolute
+					height: 2px
+					width: 25px
+					background-color: #000
+					left: 0
+					bottom: 0
+					background-color: $GreyBG2
+					transform: rotate(135deg) translate(-1px, 8px)
