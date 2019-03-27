@@ -4,114 +4,145 @@
 	+r(991)
 		padding-top: 0
 		padding-bottom: 0
-	.flex-box
-		display: flex
-		//justify-content: space-between
-		margin-bottom: 55px
-		//width: 1140px
-		//margin: 0 auto
-		+r(1199)
-			justify-content: space-between
+	.container
 		+r(991)
-			flex-direction: column
-			margin-bottom: 0
-		.col
-			//background-color: white
-			margin-right: 100px
+			width: 100%
+			padding: 0
+		.flex-box
+			display: flex
+			margin-bottom: 55px
 			+r(1199)
-				margin-right: 0
-				position: relative
+				justify-content: space-between
 			+r(991)
-				&:after
-					content: ''
-					position: absolute
-					left: 0
-					right: 0
-					bottom: 0
-					height: 2px
-					background-color: cyan
-			.title
-				color: white
-				//text-decoration: none
-				font-size: 14px
-				font-family: $OpenSans			
-				margin-bottom: 20px	
-				display: block
+				flex-direction: column
+				margin-bottom: 0
+			.col
+				margin-right: 100px
+				+r(1199)
+					margin-right: 0
+					position: relative
 				+r(991)
-					line-height: 65px
-					margin-bottom: 0
-			.list
-				+r(991)
-					background-color: cyan
-				.item
-					margin-bottom: 10px
-					+r(991)
-						display: block
-					&:last-of-type
-						margin-bottom: 0
-					.link
-						font-family: $OpenSans	
-						font-size: 12px
-						color: $GreyF4
-						text-decoration: none
-			&--sets
-				width: 290px
-				+r(991)
-					width: 100%
+					&:after
+						content: ''
+						position: absolute
+						left: 0
+						right: 0
+						bottom: 0
+						height: 2px
+						background-color: $pseudoBlueBG2
 				.title
+					color: white
+					//text-decoration: none
+					font-size: 14px
+					font-family: $OpenSans			
+					margin-bottom: 20px	
 					display: block
-				.list
-					display: flex
-					flex-direction: column
-					flex-wrap: wrap
-					height: 150px
-					align-content: space-between
-					+r(991)
-						height: auto
-					.item
-						max-width: 200px
+					&:after
+						display: none
+						content: ''
+						position: absolute
+						height: 14px
+						width: 14px
+						border: 1px solid white
+						border-top: none
+						border-left: none
+						right: 0
+						top: 50%
+						transform: translate(0, -75%) rotate(45deg)
+						transition: transform .5s
 						+r(991)
-							max-width: 100%
-							display: block
-			&--white
-				margin-right: auto
-				margin-left: 0
-				.title
-					display: none
-					+r(1199)
-						display: block
+							display: initial
+					+r(991)
+						line-height: 65px
+						margin-bottom: 0
+						width: 720px
+						margin: 0 auto
+						position: relative
+				.unwrapped
+					//background-color: #fff
+					&::after
+						//background-color: #fff
+						transition: transform .5s
+						transform: translate(0, -25%) rotate(225deg)
 				.list
+					+r(991)
+						background-color: $pseudoBlueBG2
+						padding: 20px 0
 					.item
+						margin-bottom: 10px
+						+r(991)
+							display: block
+							width: 720px
+							margin: 0 auto
+							line-height: 30px
+						&:last-of-type
+							margin-bottom: 0
 						.link
-							color: white
+							font-family: $OpenSans	
+							font-size: 12px
+							color: $GreyF4
 							text-decoration: none
-							font-size: 14px
-							font-family: $OpenSans			
-							margin-bottom: 20px	
-			&:last-of-type
-				margin-right: 0
-	.info
-		display: flex
-		align-items: center
-		+r(991)
-			height: 97px
-		.txt
-			font-family: $OpenSans
-			font-size: 12px
-			color: $GreyF4
-			margin-right: 135px
-		.link
-			font-family: $OpenSans
-			font-size: 12px
-			color: $GreyF4		
-			margin-right: auto
-			margin-left: 0		
-		.fico
-			color: #8d969a
-			font-size: 27px
-			margin-right: 15px
-			cursor: pointer
-			&:last-of-type
-				margin-right: 0
-			&:hover
-				color: grey
+				&--sets
+					width: 290px
+					+r(991)
+						width: 100%
+					.title
+						display: block
+					.list
+						display: flex
+						flex-direction: column
+						flex-wrap: wrap
+						height: 150px
+						align-content: space-between
+						+r(991)
+							height: auto
+							flex-wrap: nowrap
+						.item
+							max-width: 200px
+							+r(991)
+								max-width: 100%
+								display: block
+				&--white
+					margin-right: auto
+					margin-left: 0
+					.title
+						display: none
+						+r(991)
+							display: block
+					.list
+						.item
+							.link
+								color: white
+								text-decoration: none
+								font-size: 14px
+								font-family: $OpenSans			
+								margin-bottom: 20px	
+				&:last-of-type
+					margin-right: 0
+		.info
+			display: flex
+			align-items: center
+			+r(991)
+				height: 97px
+				width: 720px
+				margin: 0 auto
+			.txt
+				font-family: $OpenSans
+				font-size: 12px
+				color: $GreyF4
+				margin-right: 135px
+			.link
+				font-family: $OpenSans
+				font-size: 12px
+				color: $GreyF4		
+				margin-right: auto
+				margin-left: 0		
+			.fico
+				color: #8d969a
+				font-size: 27px
+				margin-right: 15px
+				cursor: pointer
+				&:last-of-type
+					margin-right: 0
+				&:hover
+					color: grey
