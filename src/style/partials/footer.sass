@@ -8,6 +8,8 @@
 		display: flex
 		//justify-content: space-between
 		margin-bottom: 55px
+		//width: 1140px
+		//margin: 0 auto
 		+r(1199)
 			justify-content: space-between
 		+r(991)
@@ -17,7 +19,17 @@
 			//background-color: white
 			margin-right: 100px
 			+r(1199)
-				margin-right: 30px
+				margin-right: 0
+				position: relative
+			+r(991)
+				&:after
+					content: ''
+					position: absolute
+					left: 0
+					right: 0
+					bottom: 0
+					height: 2px
+					background-color: cyan
 			.title
 				color: white
 				//text-decoration: none
@@ -29,6 +41,8 @@
 					line-height: 65px
 					margin-bottom: 0
 			.list
+				+r(991)
+					background-color: cyan
 				.item
 					margin-bottom: 10px
 					+r(991)
@@ -62,6 +76,10 @@
 			&--white
 				margin-right: auto
 				margin-left: 0
+				.title
+					display: none
+					+r(1199)
+						display: block
 				.list
 					.item
 						.link
