@@ -62,6 +62,20 @@
 		.reason
 			width: 195px
 			margin-bottom: 35px
+			+r(767)
+				display: none
+			&:nth-of-type(1)
+				+r(767)
+					display: initial
+					margin-bottom: 90px
+			&:nth-of-type(6)
+				+r(767)
+					display: initial
+					margin-bottom: 60px
+			&:nth-of-type(9)
+				+r(767)
+					display: initial
+					margin-bottom: 70px
 			&__pic
 				//display: inline-block
 				width: 61px
@@ -77,11 +91,11 @@
 				color: $GreyF3
 				line-height: 1.8
 				margin-bottom: 85px
+				+r(767)
+					margin: 0
 			&:last-of-type
 				+r(991)
 					margin: 0 auto
-				+r(767)
-					margin: 0
 	.show-more
 		display: none
 		text-transform: uppercase

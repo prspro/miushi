@@ -202,14 +202,14 @@ $(document).ready(function(){
     $('.btn--news').on('click', function(){
         $('.new-stock-carousel').slick('slickUnfilter');   
         $('.new-stock-carousel').slick('slickFilter', $('.slide--new'));
-        $('.btn--news')[0].classList.add('btn--active');
-        $('.btn--stock')[0].classList.remove('btn--active');
+        $('.btn--news').addClass('btn--active');
+        $('.btn--stock').removeClass('btn--active');
     });
     $('.btn--stock').on('click', function(){
         $('.new-stock-carousel').slick('slickUnfilter');  
         $('.new-stock-carousel').slick('slickFilter', $('.slide--stock'));
-        $('.btn--news')[0].classList.remove('btn--active');
-        $('.btn--stock')[0].classList.add('btn--active');
+        $('.btn--news').removeClass('btn--active');
+        $('.btn--stock').addClass('btn--active');
     }); 
     //$('.btn').css("border-color", "red");
     //console.log($('.btn--news')[0].classList);

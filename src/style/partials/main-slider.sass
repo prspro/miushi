@@ -2,6 +2,8 @@
 	// padding-top: 159px
 	//background: url('../img/slider-bg.png') no-repeat
 	//background-position: left 50% top 0
+	+r(767)
+		margin-bottom: 46px
 	.sale-carousel
 		.sale-slide
 			//display: inline-block
@@ -10,6 +12,8 @@
 			padding-bottom: 150px
 			+r(991)
 				padding-bottom: 75px
+			+r(767)
+				padding: 0
 			.sale
 				display: block
 				width: 1140px
@@ -24,6 +28,7 @@
 					padding-top: 60px
 				+r(767)
 					width: 290px
+					padding-top: 40px
 				.title
 					display: block
 					max-width: 725px
@@ -42,8 +47,8 @@
 					+r(767)
 						font-size: 49px
 						max-width: 237px
-						padding-right: 53px
-						margin-bottom: 20px
+						padding-right: 0
+						margin-bottom: 30px
 				.sale-value
 					z-index: 1
 					position: absolute
@@ -60,6 +65,12 @@
 						line-height: 25px
 						top: 35px
 						right: 0
+					+r(767)
+						font-size: 14px
+						max-width: 60px
+						line-height: 18px
+						right: -48px
+						top: 65px
 					&::after
 						z-index: -1
 						content: ''
@@ -74,6 +85,10 @@
 						+r(991)
 							height: 90px
 							width: 90px
+						+r(767)
+							width: 67px
+							height: 67px
+							transform: translate(-50%, -50%) translate(0, -3px)
 				.hours
 					display: block
 					font-family: $OpenSansItalic
@@ -84,6 +99,9 @@
 					+r(991)
 						font-size: 18px
 						margin-bottom: 30px
+					+r(767)
+						font-size: 12px
+						margin-bottom: 60px
 				.btn
 					display: inline-block
 					font-family: $OpenSansRegular
@@ -98,15 +116,18 @@
 					+r(991)
 						font-size: 16px
 						padding: 0 43px
+					+r(767)
+						display: none
 			&--1
 				background: url('../img/slider_bg.jpg') no-repeat
 				background-position: left 50% top 0	
+				background-size: cover			
 			&--2
 				background: url('../img/slider_bg.jpg') no-repeat
 				background-position: left 50% top 0	
 			&--3
 				background: url('../img/slider_bg.jpg') no-repeat
-				background-position: left 50% top 0					
+				background-position: left 50% top 0		
 		.custom-dots
 			position: absolute
 			bottom: 65px
@@ -118,6 +139,8 @@
 			width: 100%
 			+r(991)
 				bottom: 32px
+			+r(767)
+				bottom: -30px
 			li 
 				position: relative
 				display: inline-block
@@ -126,6 +149,9 @@
 				margin: 0 10px
 				padding: 0
 				//background-color: $pseudoGrayBg2
+				+r(767)
+					height: 12px
+					width: 12px
 				button
 					//cursor: pointer
 					border-radius: 50%
@@ -140,11 +166,9 @@
 					color: transparent
 					padding: 0
 					cursor: pointer
-					//background-color: red
-					//&:hover
-						outline: none
-					//&:focus
-						outline: none
+					+r(767)
+						height: 12px
+						width: 12px
 			.slick-active
 				button
 					background-color: $GreenBG
