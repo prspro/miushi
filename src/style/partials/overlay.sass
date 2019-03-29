@@ -6,12 +6,19 @@
 	left: 0
 	background-color: rgba(0, 0, 0, .6)
 	display: none
+	z-index: 20
 	.menu
 		z-index: 5
 		background-color: $mainColor
 		padding: 60px 0 60px 67px
 		position: absolute
 		min-width: 380px
+		+r(767)
+			padding: 20px 0 20px 25px
+			width: 290px
+			min-width: auto
+			left: 50%
+			transform: translate(-50%, 15px)
 		.cross
 			position: absolute
 			height: 16px
@@ -42,6 +49,8 @@
 			&__item
 				display: block
 				margin-bottom: 35px
+				+r(767)
+					margin-bottom: 15px
 				.link
 					font-family: $OpenSansSemiBold
 					color: black
@@ -51,8 +60,12 @@
 					transition: color .5s
 					&:hover
 						color: grey
+					+r(767)
+						font-size: 12px
 				&:last-of-type
 					margin-bottom: 105px
+					+r(767)
+						margin-bottom: 30px
 		.number
 			display: block
 			font-family: $OpenSansBold

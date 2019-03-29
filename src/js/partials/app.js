@@ -211,8 +211,6 @@ $(document).ready(function(){
         $('.btn--news').removeClass('btn--active');
         $('.btn--stock').addClass('btn--active');
     }); 
-    //$('.btn').css("border-color", "red");
-    //console.log($('.btn--news')[0].classList);
 
     var accordeon;
     const bpTablet = 992;
@@ -267,4 +265,14 @@ $(document).ready(function(){
         }
     }
 
+    
+});
+$(document).on("click", function(e) {
+    const id = e.target.id;
+    const overlay = $("#js_overlay");
+    
+    if (id === "js_overlay" || id === "js_close" || id === "js_burger" || id === "js_burger__bar") {
+        overlay.fadeToggle();
+        noScroll.toggle();
+    }
 });
