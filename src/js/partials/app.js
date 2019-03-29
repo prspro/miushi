@@ -1,4 +1,43 @@
 $(document).ready(function(){
+
+    function setSlider (carousel) {
+        carousel.slick({
+            infinite: true,
+            dots: true,
+            dotsClass: 'custom-dots',
+            arrows: true,
+            prevArrow: '<div class="arrow arrow--left"></div>',
+            nextArrow: '<div class="arrow arrow--right"></div>',
+            autoplay: true,
+            autoplaySpeed: 4000,
+            slidesToShow: 4,
+            slidesToScroll: 1,  
+            //adaptiveHeight: true  
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: 
+                    {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: 
+                    {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: false,
+                        centerMode: true,
+                        variableWidth: true,
+                    }
+                }
+            ] 
+        });
+    }
+    
     $('.sale-carousel').slick({
         infinite: true,
         dots: true,
@@ -21,182 +60,12 @@ $(document).ready(function(){
             }
         ]  
     });
-    $('.sets-carousel').slick({
-        infinite: true,
-        dots: true,
-        dotsClass: 'custom-dots',
-        arrows: true,
-        prevArrow: '<div class="arrow arrow--left"></div>',
-        nextArrow: '<div class="arrow arrow--right"></div>',
-        autoplay: true,
-        autoplaySpeed: 4000,
-        slidesToShow: 4,
-        slidesToScroll: 1,  
-        //adaptiveHeight: true  
-        responsive: [
-            {
-                breakpoint: 991,
-                settings: 
-                {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: 
-                {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false,
-                    dots: false,
-                    centerMode: true,
-                    variableWidth: true,
-                }
-            }
-        ] 
-    });
-    $('.rolls-carousel').slick({
-        infinite: true,
-        dots: true,
-        dotsClass: 'custom-dots',
-        arrows: true,
-        prevArrow: '<div class="arrow arrow--left"></div>',
-        nextArrow: '<div class="arrow arrow--right"></div>',
-        autoplay: true,
-        autoplaySpeed: 4000,
-        slidesToShow: 4,
-        slidesToScroll: 1,  
-        //adaptiveHeight: true   
-        responsive: [
-            {
-                breakpoint: 991,
-                settings: 
-                {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: 
-                {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false,
-                    dots: false,
-                    centerMode: true,
-                    variableWidth: true,
-                }
-            }
-        ]  
-    });
-    $('.pizza-carousel').slick({
-        infinite: true,
-        dots: true,
-        dotsClass: 'custom-dots',
-        arrows: true,
-        prevArrow: '<div class="arrow arrow--left"></div>',
-        nextArrow: '<div class="arrow arrow--right"></div>',
-        autoplay: true,
-        autoplaySpeed: 4000,
-        slidesToShow: 4,
-        slidesToScroll: 1,  
-        //adaptiveHeight: true    
-        responsive: [
-            {
-                breakpoint: 991,
-                settings: 
-                {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: 
-                {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false,
-                    dots: false,
-                    centerMode: true,
-                    variableWidth: true,
-                }
-            }
-        ]  
-    });
-    $('.wok-carousel').slick({
-        infinite: true,
-        dots: true,
-        dotsClass: 'custom-dots',
-        arrows: true,
-        prevArrow: '<div class="arrow arrow--left"></div>',
-        nextArrow: '<div class="arrow arrow--right"></div>',
-        autoplay: true,
-        autoplaySpeed: 4000,
-        slidesToShow: 4,
-        slidesToScroll: 1,  
-        //adaptiveHeight: true  
-        responsive: [
-            {
-                breakpoint: 991,
-                settings: 
-                {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: 
-                {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false,
-                    dots: false,
-                    centerMode: true,
-                    variableWidth: true,
-                }
-            }
-        ]    
-    });
-    $('.new-stock-carousel').slick({
-        infinite: true,
-        dots: true,
-        dotsClass: 'custom-dots',
-        arrows: true,
-        prevArrow: '<div class="arrow arrow--left"></div>',
-        nextArrow: '<div class="arrow arrow--right"></div>',
-        autoplay: true,
-        autoplaySpeed: 4000,
-        slidesToShow: 4,
-        slidesToScroll: 1,  
-        //adaptiveHeight: true    
-        //slickFilter: $('.slide--new')
-        responsive: [
-            {
-                breakpoint: 991,
-                settings: 
-                {
-                    slidesToShow: 3,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: 
-                {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false,
-                    dots: false,
-                    centerMode: true,
-                    variableWidth: true,
-                }
-            }
-        ]  
-    });
+    setSlider($('.sets-carousel'));
+    setSlider($('.rolls-carousel'));
+    setSlider($('.pizza-carousel'));
+    setSlider($('.wok-carousel'));
+
+    setSlider($('.new-stock-carousel'));
     $('.new-stock-carousel').slick('slickFilter', $('.slide--new'));
 
     $('.btn--news').on('click', function(){
@@ -230,7 +99,7 @@ $(document).ready(function(){
     $(window).resize(function() {
         accordeon = Apply(bpTablet);
         if (Allow(Apply(bpTablet))) {
-            if ($(window).width() < bpTablet) {
+            if (Apply(bpTablet)) {
                 $('.col .list').slideUp(0);
             } else {
                 $('.col .list').slideDown(0);
@@ -267,6 +136,7 @@ $(document).ready(function(){
 
     
 });
+
 $(document).on("click", function(e) {
     const id = e.target.id;
     const overlay = $("#js_overlay");
